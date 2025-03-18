@@ -1,0 +1,185 @@
+/* Background Music for Elementor Styles */
+
+/* Base Styles */
+.bme-audio-widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A64446;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Default to inline positioning */
+    width: 75px;
+    height: 75px;
+    /* No default border */
+    border: none;
+    /* No default padding */
+    padding: 0;
+}
+
+/* Play/Pause Button */
+.bme-play-pause-btn {
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    outline: none;
+    color: inherit !important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Override theme button hover styles */
+.bme-play-pause-btn:hover,
+.bme-play-pause-btn:focus,
+button.bme-play-pause-btn:hover,
+button.bme-play-pause-btn:focus {
+    background: none !important;
+    color: inherit !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+
+.bme-play-pause-btn svg {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+}
+
+.bme-play-pause-btn:hover svg {
+    transform: scale(1.1);
+    /* No color changes on hover */
+}
+
+/* Volume Control */
+.bme-volume-control {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    /* Background is now controlled by Elementor settings */
+    border-radius: 0 0 8px 8px; /* Default value, overridden by Elementor settings */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    box-sizing: border-box;
+    /* Transition properties will be controlled by inline styles and classes */
+}
+
+/* Create a phantom padding element for better hover UX */
+.bme-audio-widget::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+    z-index: -1;
+}
+
+/* Base display rules for volume control on hover */
+.bme-audio-widget:hover .bme-volume-control,
+.bme-volume-control:hover {
+    display: flex;
+}
+
+/* Transition effects */
+/* Fade transition */
+.bme-transition-fade {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+
+.bme-audio-widget:hover .bme-transition-fade,
+.bme-transition-fade:hover {
+    opacity: 1;
+    display: flex;
+}
+
+/* Slide transition */
+.bme-transition-slide {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+}
+
+.bme-audio-widget:hover .bme-transition-slide,
+.bme-transition-slide:hover {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+}
+
+/* None transition - immediate display */
+.bme-transition-none {
+    transition: none;
+}
+
+/* Override for all transitions to ensure proper display */
+.bme-audio-widget:hover .bme-volume-control {
+    display: flex;
+}
+
+.bme-volume-slider {
+    width: 80%;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 2px;
+}
+
+.bme-volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bme-volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+/* Hide Audio Element */
+.bme-audio-element {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .bme-play-pause-btn svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .bme-audio-widget {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .bme-volume-control {
+        bottom: -30px;
+        height: 30px;
+    }
+}
