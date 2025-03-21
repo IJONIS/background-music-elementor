@@ -106,7 +106,8 @@ final class Background_Music_Elementor {
      * Admin notice for missing Elementor
      */
     public function admin_notice_missing_main_plugin() {
-        if (isset($_GET['activate'])) {
+        // Verify nonce if this is a form submission
+        if (isset($_GET['activate']) && !wp_verify_nonce(sanitize_key($_GET['_wpnonce'] ?? ''), 'activate-plugin_' . plugin_basename(__FILE__))) {
             unset($_GET['activate']);
         }
 
@@ -117,14 +118,15 @@ final class Background_Music_Elementor {
             '<strong>' . esc_html__('Elementor', 'background-music-elementor') . '</strong>'
         );
 
-        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
     }
 
     /**
      * Admin notice for minimum Elementor version
      */
     public function admin_notice_minimum_elementor_version() {
-        if (isset($_GET['activate'])) {
+        // Verify nonce if this is a form submission
+        if (isset($_GET['activate']) && !wp_verify_nonce(sanitize_key($_GET['_wpnonce'] ?? ''), 'activate-plugin_' . plugin_basename(__FILE__))) {
             unset($_GET['activate']);
         }
 
@@ -136,14 +138,15 @@ final class Background_Music_Elementor {
             self::MINIMUM_ELEMENTOR_VERSION
         );
 
-        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
     }
 
     /**
      * Admin notice for minimum PHP version
      */
     public function admin_notice_minimum_php_version() {
-        if (isset($_GET['activate'])) {
+        // Verify nonce if this is a form submission
+        if (isset($_GET['activate']) && !wp_verify_nonce(sanitize_key($_GET['_wpnonce'] ?? ''), 'activate-plugin_' . plugin_basename(__FILE__))) {
             unset($_GET['activate']);
         }
 
@@ -155,7 +158,7 @@ final class Background_Music_Elementor {
             self::MINIMUM_PHP_VERSION
         );
 
-        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+        printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
     }
 
     /**
