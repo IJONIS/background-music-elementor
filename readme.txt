@@ -5,7 +5,7 @@ Tags: elementor, music, audio, background music, sound
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,10 +77,20 @@ Select "Fixed (Stays in Viewport)" as the Position Type in the widget settings.
 
 == Changelog ==
 
+= 1.0.1 =
+* Updated text domain to comply with WordPress.org plugin repository requirements
+* Added proper escaping for admin notices
+* Added nonce verification for form processing
+* Updated "Tested up to" WordPress version to 6.7
+* Fixed various code quality issues for WordPress.org submission
+
 = 1.0.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+First stable release of Background Music for Elementor.
 
 = 1.0.0 =
 First stable release of Background Music for Elementor.

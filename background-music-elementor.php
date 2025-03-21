@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: Background Music for Elementor
- * Plugin URI: https://wordpress.org/plugins/background-music-for-elementor/
+ * Plugin URI: https://wordpress.org/plugins/background-music-elementor-1/
  * Description: Add background music to your website with customizable controls.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: IJONIS
  * Author URI: https://ijonis.com/
- * Text Domain: background-music-elementor
+ * Text Domain: background-music-elementor-1
  * Domain Path: /languages
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -29,7 +29,7 @@ final class Background_Music_Elementor {
     /**
      * Plugin Version
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
 
     /**
      * Minimum Elementor Version
@@ -69,7 +69,7 @@ final class Background_Music_Elementor {
      * Load plugin textdomain
      */
     public function load_textdomain() {
-        load_plugin_textdomain('background-music-elementor', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('background-music-elementor-1', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 
     /**
@@ -113,9 +113,9 @@ final class Background_Music_Elementor {
 
         $message = sprintf(
             /* translators: 1: Plugin name 2: Elementor */
-            esc_html__('%1$s requires %2$s to be installed and activated.', 'background-music-elementor'),
-            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'background-music-elementor') . '</strong>'
+            esc_html__('%1$s requires %2$s to be installed and activated.', 'background-music-elementor-1'),
+            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor-1') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'background-music-elementor-1') . '</strong>'
         );
 
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
@@ -132,9 +132,9 @@ final class Background_Music_Elementor {
 
         $message = sprintf(
             /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-            esc_html__('%1$s requires %2$s version %3$s or greater.', 'background-music-elementor'),
-            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'background-music-elementor') . '</strong>',
+            esc_html__('%1$s requires %2$s version %3$s or greater.', 'background-music-elementor-1'),
+            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor-1') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'background-music-elementor-1') . '</strong>',
             self::MINIMUM_ELEMENTOR_VERSION
         );
 
@@ -152,9 +152,9 @@ final class Background_Music_Elementor {
 
         $message = sprintf(
             /* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-            esc_html__('%1$s requires %2$s version %3$s or greater.', 'background-music-elementor'),
-            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor') . '</strong>',
-            '<strong>' . esc_html__('PHP', 'background-music-elementor') . '</strong>',
+            esc_html__('%1$s requires %2$s version %3$s or greater.', 'background-music-elementor-1'),
+            '<strong>' . esc_html__('Background Music for Elementor', 'background-music-elementor-1') . '</strong>',
+            '<strong>' . esc_html__('PHP', 'background-music-elementor-1') . '</strong>',
             self::MINIMUM_PHP_VERSION
         );
 
@@ -176,14 +176,14 @@ final class Background_Music_Elementor {
      * Frontend styles
      */
     public function frontend_styles() {
-        wp_enqueue_style('background-music-elementor', plugins_url('assets/css/background-music-elementor.css', __FILE__), [], self::VERSION);
+        wp_enqueue_style('background-music-elementor-1', plugins_url('assets/css/background-music-elementor.css', __FILE__), [], self::VERSION);
     }
 
     /**
      * Frontend scripts
      */
     public function frontend_scripts() {
-        wp_register_script('background-music-elementor', plugins_url('assets/js/background-music-elementor.js', __FILE__), ['jquery'], self::VERSION, true);
+        wp_register_script('background-music-elementor-1', plugins_url('assets/js/background-music-elementor.js', __FILE__), ['jquery'], self::VERSION, true);
     }
 }
 

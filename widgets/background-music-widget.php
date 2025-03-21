@@ -30,7 +30,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__('Background Music', 'background-music-elementor');
+        return esc_html__('Background Music', 'background-music-elementor-1');
     }
 
     /**
@@ -77,7 +77,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__('Audio Settings', 'background-music-elementor'),
+                'label' => esc_html__('Audio Settings', 'background-music-elementor-1'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -85,7 +85,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'audio_file',
             [
-                'label' => esc_html__('Audio File', 'background-music-elementor'),
+                'label' => esc_html__('Audio File', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'media_type' => 'audio',
                 'default' => [
@@ -97,10 +97,10 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'loop',
             [
-                'label' => esc_html__('Loop Audio', 'background-music-elementor'),
+                'label' => esc_html__('Loop Audio', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'background-music-elementor'),
-                'label_off' => esc_html__('No', 'background-music-elementor'),
+                'label_on' => esc_html__('Yes', 'background-music-elementor-1'),
+                'label_off' => esc_html__('No', 'background-music-elementor-1'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -109,23 +109,23 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'remember_position',
             [
-                'label' => esc_html__('Remember Position', 'background-music-elementor'),
+                'label' => esc_html__('Remember Position', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'background-music-elementor'),
-                'label_off' => esc_html__('No', 'background-music-elementor'),
+                'label_on' => esc_html__('Yes', 'background-music-elementor-1'),
+                'label_off' => esc_html__('No', 'background-music-elementor-1'),
                 'return_value' => 'yes',
                 'default' => 'yes',
-                'description' => esc_html__('Remember audio position when navigating between pages', 'background-music-elementor'),
+                'description' => esc_html__('Remember audio position when navigating between pages', 'background-music-elementor-1'),
             ]
         );
 
         $this->add_control(
             'show_player',
             [
-                'label' => esc_html__('Show Player Button', 'background-music-elementor'),
+                'label' => esc_html__('Show Player Button', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'background-music-elementor'),
-                'label_off' => esc_html__('Hide', 'background-music-elementor'),
+                'label_on' => esc_html__('Show', 'background-music-elementor-1'),
+                'label_off' => esc_html__('Hide', 'background-music-elementor-1'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -137,7 +137,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'button_style_section',
             [
-                'label' => esc_html__('Button Style', 'background-music-elementor'),
+                'label' => esc_html__('Button Style', 'background-music-elementor-1'),
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_player' => 'yes',
@@ -148,7 +148,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_background_color',
             [
-                'label' => esc_html__('Background Color', 'background-music-elementor'),
+                'label' => esc_html__('Background Color', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#A64446',
                 'selectors' => [
@@ -160,7 +160,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_hover_background_color',
             [
-                'label' => esc_html__('Hover Background Color', 'background-music-elementor'),
+                'label' => esc_html__('Hover Background Color', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#B85557',
                 'selectors' => [
@@ -172,7 +172,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'icon_color',
             [
-                'label' => esc_html__('Icon Color', 'background-music-elementor'),
+                'label' => esc_html__('Icon Color', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#FFFFFF',
                 'selectors' => [
@@ -185,7 +185,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'icon_hover_color',
             [
-                'label' => esc_html__('Icon Hover Color', 'background-music-elementor'),
+                'label' => esc_html__('Icon Hover Color', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#FFFFFF',
                 'selectors' => [
@@ -198,7 +198,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_size',
             [
-                'label' => esc_html__('Button Size', 'background-music-elementor'),
+                'label' => esc_html__('Button Size', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -221,7 +221,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'icon_size',
             [
-                'label' => esc_html__('Icon Size', 'background-music-elementor'),
+                'label' => esc_html__('Icon Size', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -253,7 +253,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'background-music-elementor'),
+                'label' => esc_html__('Border Radius', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -284,7 +284,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'additional_controls_section',
             [
-                'label' => esc_html__('Additional Controls', 'background-music-elementor'),
+                'label' => esc_html__('Additional Controls', 'background-music-elementor-1'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -292,10 +292,10 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'show_volume',
             [
-                'label' => esc_html__('Show Volume Control', 'background-music-elementor'),
+                'label' => esc_html__('Show Volume Control', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'background-music-elementor'),
-                'label_off' => esc_html__('Hide', 'background-music-elementor'),
+                'label_on' => esc_html__('Show', 'background-music-elementor-1'),
+                'label_off' => esc_html__('Hide', 'background-music-elementor-1'),
                 'return_value' => 'yes',
                 'default' => 'no',
                 'condition' => [
@@ -307,7 +307,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'default_volume',
             [
-                'label' => esc_html__('Default Volume', 'background-music-elementor'),
+                'label' => esc_html__('Default Volume', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['%'],
                 'range' => [
@@ -330,7 +330,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'volume_control_background_color',
             [
-                'label' => esc_html__('Volume Control Background', 'background-music-elementor'),
+                'label' => esc_html__('Volume Control Background', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#A64446',
                 'selectors' => [
@@ -345,7 +345,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'volume_control_distance',
             [
-                'label' => esc_html__('Volume Control Distance', 'background-music-elementor'),
+                'label' => esc_html__('Volume Control Distance', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -372,7 +372,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'volume_control_border_radius',
             [
-                'label' => esc_html__('Volume Control Border Radius', 'background-music-elementor'),
+                'label' => esc_html__('Volume Control Border Radius', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -395,13 +395,13 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'volume_control_transition',
             [
-                'label' => esc_html__('Volume Control Transition', 'background-music-elementor'),
+                'label' => esc_html__('Volume Control Transition', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => 'fade',
                 'options' => [
-                    'fade' => esc_html__('Fade', 'background-music-elementor'),
-                    'slide' => esc_html__('Slide', 'background-music-elementor'),
-                    'none' => esc_html__('None', 'background-music-elementor'),
+                    'fade' => esc_html__('Fade', 'background-music-elementor-1'),
+                    'slide' => esc_html__('Slide', 'background-music-elementor-1'),
+                    'none' => esc_html__('None', 'background-music-elementor-1'),
                 ],
                 'condition' => [
                     'show_volume' => 'yes',
@@ -412,7 +412,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'volume_control_transition_speed',
             [
-                'label' => esc_html__('Transition Speed (s)', 'background-music-elementor'),
+                'label' => esc_html__('Transition Speed (s)', 'background-music-elementor-1'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['s'],
                 'range' => [
@@ -488,14 +488,14 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         // Audio element
         echo '<audio id="bme-bg-music" ' . esc_attr($loop_attr) . ' class="bme-audio-element">';
         echo '  <source src="' . esc_url($audio_url) . '" type="audio/mp3">';
-        echo '  ' . esc_html__('Your browser does not support HTML5 audio.', 'background-music-elementor');
+        echo '  ' . esc_html__('Your browser does not support HTML5 audio.', 'background-music-elementor-1');
         echo '</audio>';
 
         // Include frontend script
-        wp_enqueue_script('background-music-elementor');
+        wp_enqueue_script('background-music-elementor-1');
         
         // Pass data to the script
-        wp_localize_script('background-music-elementor', 'bmeSettings', [
+        wp_localize_script('background-music-elementor-1', 'bmeSettings', [
             'rememberPosition' => $settings['remember_position'] == 'yes',
             'defaultVolume' => $default_volume / 100,
         ]);
@@ -538,7 +538,7 @@ class Background_Music_Widget extends \Elementor\Widget_Base {
         
         <audio id="bme-bg-music" {{{ loopAttr }}} class="bme-audio-element">
             <source src="{{ settings.audio_file.url }}" type="audio/mp3">
-            <?php echo esc_html__('Your browser does not support HTML5 audio.', 'background-music-elementor'); ?>
+            <?php echo esc_html__('Your browser does not support HTML5 audio.', 'background-music-elementor-1'); ?>
         </audio>
         <?php
     }
